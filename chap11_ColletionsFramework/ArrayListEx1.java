@@ -5,8 +5,8 @@ import java.util.*;
 class ArrayListEx1{
     public static void main(String[] args) {
         ArrayList list1 = new ArrayList(10);
-        list1.add(5);
-        list1.add(Integer.valueOf(4));
+        list1.add(5);                     // 컴파일러가 자동으로 객체로 랩핑(오토박싱)
+        list1.add(Integer.valueOf(4)); // 원시타입을 list에 add하면 컴파일러가 Integer.valueOf()로 객체타입으로 변환시켜줌
         list1.add(Integer.valueOf(2));
         list1.add(Integer.valueOf(0));
         list1.add(Integer.valueOf(1));
@@ -15,7 +15,7 @@ class ArrayListEx1{
         ArrayList list2 = new ArrayList(list1.subList(1,4));
         print(list1, list2);
 
-        Collections.sort(list1);	// list1과 list2를 정렬한다.
+        Collections.sort(list1);	// list1과 list2를 정렬
         Collections.sort(list2);	// Collections.sort(List l)
         print(list1, list2);
 
