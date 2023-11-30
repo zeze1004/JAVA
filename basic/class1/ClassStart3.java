@@ -13,7 +13,12 @@ public class ClassStart3 {
         student2.age = 15;
         student2.grade = 90;
 
-        System.out.println("이름:" + student1.name + " 나이:" + student1.age + " 성적:" + student1.grade);
-        System.out.println("이름:" + student2.name + " 나이:" + student2.age + " 성적:" + student2.grade);
+        Student[] students = new Student[2]; // students = 메모리 주소값, 해당 메모리에 두 개의 배열 공간 존재[null, null]
+                                             // 자바에서 대입은 항상 변수에 들어 있는 값을 복사
+        students[0] = student1;
+        students[1] = student2;
+
+        System.out.println("이름:" + students[0].name + " 나이:" + students[0].age + " 성적:" + students[0].grade);
+        System.out.println("이름:" + students[1].name + " 나이:" + students[1].age + " 성적:" + students[1].grade);
     }
 }
