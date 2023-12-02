@@ -1,9 +1,13 @@
 package basic.access;
 
 public class Speaker {
-    int volume;
+    private int volume;
 
     public Speaker(int volume) {
+        this.volume = volume;
+    }
+
+    public void setVolume(int volume) {
         this.volume = volume;
     }
 
